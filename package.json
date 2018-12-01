@@ -1,6 +1,6 @@
 {
 	"name": "terminal-cooker",
-	"version": "0.0.0",
+	"version": "0.10.0",
 	"description": "Cook inside your terminal",
 	"license": "MIT",
 	"repository": "reactor-studio/terminal-cooker",
@@ -9,7 +9,9 @@
 		"email": "dinotrojak@gmail.com",
 		"url": "dinodsaur.us"
 	},
-	"bin": "cli.js",
+	"bin": {
+		"cook": "cli.js"
+	},
 	"engines": {
 		"node": ">=6"
 	},
@@ -17,8 +19,7 @@
 		"test": "xo && ava"
 	},
 	"files": [
-		"cli.js",
-		"ui.js"
+		"cli.js"
 	],
 	"keywords": [
 		"terminal",
@@ -37,6 +38,7 @@
 		"ink-spinner": "^2.0.0",
 		"meow": "^5.0.0",
 		"node-fetch": "^2.3.0",
+		"npmlog": "^4.1.2",
 		"prop-types": "^15.6.1"
 	},
 	"devDependencies": {

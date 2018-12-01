@@ -9,23 +9,30 @@
 $ npm install --global terminal-cooker
 ```
 
+## Getting of API token
+Register on [RapidApi](https://rapidapi.com/spoonacular/api/recipe-food-nutrition) and grab your api token.
+
+Save the token to your app with:
+```
+$ cook --token=1a2b3c
+```
+
 
 ## Usage
 
 ```js
-$ terminal-cooker --help
+$ cook --help
+Usage
+	$ cook [input]
 
-  Usage
-    terminal-cooker [input]
+Options
+	--token  Spoonacular API token
 
-  Options
-    --name  Lorem ipsum [Default: false]
-
-  Examples
-    $ terminal-cooker
-    I love Ink
-    $ terminal-cooker --name=ponies
-    I love ponies
+Examples
+	$ cook --token=1a2b3c
+	info Token saved: 1a2b3c
+	$ cook eggs ham
+	Square Deviled Eggs - [eggs, ham, cream cheese]
 ```
 
 

@@ -7,7 +7,7 @@ const Item = props => {
 	if (missingIngridients.length > 5) {
 		missingIngridients = missingIngridients.slice(0, 4).join(', ') + '...';
 	} else {
-		missingIngridients.join(', ');
+		missingIngridients = missingIngridients.join(', ');
 	}
 	return (
 		<Color blue={props.isSelected}>

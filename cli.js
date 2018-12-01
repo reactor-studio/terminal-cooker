@@ -10,16 +10,18 @@ const tokenHelper = require('./src/services/token.helper');
 
 const cli = meow(`
 	Usage
-	  $ terminal-cooker [input]
+	  $ cook [input]
 
 	Options
 	  --token  Spoonacular API token
 
 	Examples
-	  $ terminal-cooker
-	  I love Ink
-	  $ terminal-cooker --token=ponies
-	  I love ponies
+		$ cook --token=1a2b3c
+		info Token saved: 1a2b3c
+		$ cook eggs ham
+		Square Deviled Eggs - [eggs, ham, cream cheese]
+  	Japanese Corn Soup - [eggs, canned corn]
+  	Scotch Eggs - [eggs, bulk sausage, corn meal]
 `);
 const token = cli.flags.token || tokenHelper.getToken();
 
