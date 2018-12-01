@@ -1,6 +1,6 @@
 # terminal-cooker [![Build Status](https://travis-ci.org/dinodsaurus/terminal-cooker.svg?branch=master)](https://travis-ci.org/dinodsaurus/terminal-cooker)
 
-> Cook inside your terminal
+> Master chef inside your terminal
 
 ![Cook image](./img/cook.gif)
 
@@ -25,7 +25,7 @@ $ cook --token=1a2b3c
 ```js
 $ cook --help
 Usage
-	$ cook [input]
+	$ cook [ingredients]
 
 Options
 	--token  Spoonacular API token
