@@ -18,9 +18,6 @@
 	"engines": {
 		"node": ">=6"
 	},
-	"scripts": {
-		"test": "xo && ava"
-	},
 	"files": ["cli.js"],
 	"keywords": ["terminal", "cooking"],
 	"dependencies": {
