@@ -2,6 +2,8 @@
 
 > Cook inside your terminal
 
+![Cook image](./img/cook.gif)
+
 
 ## Install
 
