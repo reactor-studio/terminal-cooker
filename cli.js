@@ -2,23 +2,34 @@
 'use strict';
 
 const importJsx = require('import-jsx');
-const {h, render} = require('ink');
+const { h, render } = require('ink');
 const meow = require('meow');
+const log = require('npmlog');
 
-const Ui = importJsx('./ui');
+const App = importJsx('./src/app');
+const tokenHelper = require('./src/services/token.helper');
 
 const cli = meow(`
 	Usage
 	  $ terminal-cooker [input]
 
 	Options
-	  --name  Lorem ipsum [Default: false]
+	  --token  Spoonacular API token
 
 	Examples
 	  $ terminal-cooker
 	  I love Ink
-	  $ terminal-cooker --name=ponies
+	  $ terminal-cooker --token=ponies
 	  I love ponies
 `);
+const token = cli.flags.token || tokenHelper.getToken();
 
-render(h(Ui, cli.flags));
+if (cli.flags.token) {
+	return tokenHelper.saveToken(cli.flags.token);
+}
+
+if (!token) {
+	return log.error('No api key present, type help for more info :)');
+}
+
+render(h(App, cli.input));
