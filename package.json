@@ -18,13 +18,7 @@
 	"engines": {
 		"node": ">=6"
 	},
-	"files": [
-		"cli.js"
-	],
-	"keywords": [
-		"terminal",
-		"cooking"
-	],
+	"keywords": ["terminal", "cooking"],
 	"dependencies": {
 		"home-dir": "^1.0.0",
 		"import-jsx": "^1.3.0",
@@ -50,9 +44,7 @@
 	},
 	"ava": {
 		"babel": {
-			"presets": [
-				"@ava/stage-4"
-			],
+			"presets": ["@ava/stage-4"],
 			"plugins": [
 				[
 					"transform-react-jsx",
@@ -65,9 +57,7 @@
 		}
 	},
 	"xo": {
-		"extends": [
-			"xo-react"
-		],
+		"extends": ["xo-react"],
 		"rules": {
 			"react/no-unused-prop-types": 1
 		},
