@@ -6,6 +6,8 @@ const Item = props => {
 	let missingIngridients = props.missedIngredients.map(i => i.name);
 	if (missingIngridients.length > 5) {
 		missingIngridients = missingIngridients.slice(0, 4).join(', ') + '...';
+	} else {
+		missingIngridients.join(', ');
 	}
 	return (
 		<Color blue={props.isSelected}>
@@ -18,7 +20,7 @@ const Item = props => {
 
 class Recipes extends Component {
 	render(props) {
-		return <SelectInput items={props.recipes} itemComponent={Item} />;
+		return <SelectInput items={props.recipes} itemComponent={Item} onSelect={props.selectRecipe} />;
 	}
 }
 

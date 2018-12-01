@@ -19,7 +19,15 @@ function getRecipes(ingridientsArray) {
 			)
 		);
 }
+function getRecipe(id) {
+	return fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information`, {
+		headers: {
+			'X-RapidAPI-Key': tokenHelper.getToken()
+		}
+	}).then(response => response.json());
+}
 
 module.exports = {
-	getRecipes: getRecipes
+	getRecipes: getRecipes,
+	getRecipe: getRecipe
 };
